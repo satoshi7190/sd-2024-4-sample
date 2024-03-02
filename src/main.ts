@@ -26,7 +26,7 @@ import turfLength from '@turf/length';
 // @turf/bufferの読み込み
 import turfBuffer from '@turf/buffer';
 
-// @turf/distanceの読み込み
+// @turf/dissolveの読み込み
 import turfDissolve from '@turf/dissolve';
 
 // 型の読み込み
@@ -285,13 +285,13 @@ const map = new maplibregl.Map({
                 },
             },
             {
-                id: 'building', // 建物レイヤー
-                source: 'gsi_vector',
+                'id': 'building', // 建物レイヤー
+                'source': 'gsi_vector',
                 'source-layer': 'building',
-                type: 'fill-extrusion',
-                minzoom: 13,
-                maxzoom: 18,
-                paint: {
+                'type': 'fill-extrusion',
+                'minzoom': 13,
+                'maxzoom': 18,
+                'paint': {
                     'fill-extrusion-color': '#BEE6FF',
                     'fill-extrusion-height': [
                         'match', // 建物の種類によって高さを変える
